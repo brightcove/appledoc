@@ -155,6 +155,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GBApplicationSettingsProvider, sharedApplicationS
 		self.embedCrossReferencesWhenProcessingMarkdown = YES;
 		self.embedAppledocBoldMarkersWhenProcessingMarkdown = YES;
 
+        self.convertPainTextHTMLLinkIntoMarkdownReference = YES;   
 		self.warnOnMissingOutputPathArgument = YES;
 		self.warnOnMissingCompanyIdentifier = YES;
 		self.warnOnUndocumentedObject = YES;

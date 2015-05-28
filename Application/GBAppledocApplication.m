@@ -269,6 +269,7 @@ static char *kGBArgHelp = "help";
         { kGBArgDocSetXMLFilename,                                          0,      DDGetoptRequiredArgument },
 		{ kGBArgDocSetPackageFilename,										0,		DDGetoptRequiredArgument },
 		
+        { "no-covert-pain-text-html", 0, DDGetoptNoArgument},
 		{ kGBArgCleanOutput,												0,		DDGetoptNoArgument },
 		{ kGBArgCreateHTML,													'h',	DDGetoptNoArgument },
 		{ kGBArgCreateDocSet,												'd',	DDGetoptNoArgument },
@@ -840,6 +841,12 @@ static char *kGBArgHelp = "help";
 - (void)setNoPrefixMergedSections:(BOOL)value { self.settings.prefixMergedCategoriesSectionsWithCategoryName = !value; }
 - (void)setUseCodeOrder:(BOOL)value { self.settings.useCodeOrder = value; }
 - (void)setNoUseCodeOrder:(BOOL)value { self.settings.useCodeOrder = !value; }
+
+- (void)setNoCovertPainTextHtml:(BOOL)value {
+
+    self.settings.convertPainTextHTMLLinkIntoMarkdownReference = NO;
+
+}
 
 - (void)setWarnMissingOutputPath:(BOOL)value { self.settings.warnOnMissingOutputPathArgument = value; }
 - (void)setWarnMissingCompanyId:(BOOL)value { self.settings.warnOnMissingCompanyIdentifier = value; }

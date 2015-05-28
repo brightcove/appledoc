@@ -422,6 +422,12 @@ NSString *NSStringFromGBPublishedFeedFormats(GBPublishedFeedFormats format);
 @property (assign) int exitCodeThreshold;
 
 ///---------------------------------------------------------------------------------------
+/// @name coress References handling
+///---------------------------------------------------------------------------------------
+
+@property (assign) BOOL convertPainTextHTMLLinkIntoMarkdownReference;
+
+///---------------------------------------------------------------------------------------
 /// @name Warnings handling
 ///---------------------------------------------------------------------------------------
 
