@@ -878,6 +878,12 @@ typedef NSUInteger GBProcessingFlag;
 		result = [NSString stringWithFormat:@"[`%@`](%@)", description, address];
 	else
 		result = [NSString stringWithFormat:@"[%@](%@)", description, address];
+    
+    if (!self.settings.convertPainTextHTMLLinkIntoMarkdownReference && [description isEqualToString:address] &&([description hasPrefix:@"http://"] || [description hasPrefix:@"https://"]))
+    {
+        return description;;
+    }
+    
 	return [self.settings stringByEmbeddingCrossReference:result];
 }
 
